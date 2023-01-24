@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-app.post('/api/v1/shipping',(req,res)=>{
+/*app.post('/api/v1/shipping',(req,res)=>{
     const body = req.body;
     //console.log(body[0].order);
     if (body[0].order.externalId=="1249462058715-01") {
@@ -27,22 +27,13 @@ app.post('/api/v1/shipping',(req,res)=>{
     }];
       
     return res.json(error);
-});
+});*/
 
 app.get('/api/v1/shipping/:externalId',(req,res)=>{
     const { externalId } = req.params;
     if (externalId=="1249462058715-01") {
         const correct = {
             "shipment": "f0e6dd6e-0295-11ed-b939-0242ac120002",
-            "carrier": "Dummy",
-            "trackingNumber": "11111222223333",
-            "trackingURL": "https://tracking.com/11111222223333",
-            "labelPDF": "https://s3.aws/bucket/dummy/11111222223333.pdf",
-            "labelZPL": "https://s3.aws/bucket/dummy/11111222223333.zpl",
-            "updatedAt": "2022-08-20'T'07:45:32.457",
-            "createdAt": "2022-08-20'T'06:24:41.658",
-            "status": "PROCESSED",
-            "errorMessage": null,
             "statusHistory": [
                 {
                     "status": "DynamoDB-status",
