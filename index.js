@@ -29,42 +29,55 @@ app.use(express.urlencoded({extended:true}));
     return res.json(error);
 });*/
 
-app.get('/api/v1/shipping/:externalId',(req,res)=>{
-    const { externalId } = req.params;
-    if (externalId=="1249462058715-01") {
+app.get('/api/v1/shipping/:id',(req,res)=>{
+    const { id } = req.params;
+    if (id=="9558e7af-96a3-4d14-8590-ec923b653e11") {
         const correct = {
-            "shipment": "f0e6dd6e-0295-11ed-b939-0242ac120002",
-            "statusHistory": [
+            "shipment": "9558e7af-96a3-4d14-8590-ec923b653e11",
+            "status_history": [
                 {
-                    "status": "DynamoDB-status",
-                    "subStatus": "DynamoDB-sub-status",
-                    "carrierUpdatedAt": "DynamoDB-carrier-updated-at",
-                    "updatedAt": "DynamoDB-updated-at",
-                    "description": "DynamoDB-description"
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
                 },
                 {
-                    "status": "DynamoDB-status",
-                    "subStatus": "DynamoDB-sub-status",
-                    "carrierUpdatedAt": "DynamoDB-carrier-updated-at",
-                    "updatedAt": "DynamoDB-updated-at",
-                    "description": "DynamoDB-description"
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
                 }
             ]
          };
         return res.json(correct);
     }
+        
     const error={
-        "shipment": "f0e6dd6e-0295-11ed-b939-0242ac120002",
-        "carrier": "Dummy",
-        "trackingNumber": "11111222223333",
-        "trackingURL": "https://tracking.com/11111222223333",
-        "labelPDF": null,
-        "labelZPL": null,
-        "updatedAt": "2022-08-20'T'07:45:32.457",
-        "createdAt": "2022-08-20'T'06:24:41.658",
-        "status": "ERROR",
-        "errorMessage": "No se puede generar la etiqueta.",
-        "statusHistory": []
+        "shipment": "9558e7af-96a3-4d14-8590-ec923b653e11",
+        "carrier": "moova",
+        "country": "ARG",
+        "external_id": "1063431",
+        "status": "error",
+        "status_change": false,
+        "tracking_url": "https://dev.moova.io/external?id=",
+        "updated_at": "2023-01-18T14:04:06.966",
+        "created_at": "2023-01-18T14:03:43.695",
     };     
     return res.json(error);
 });
