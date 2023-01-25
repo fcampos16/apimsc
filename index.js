@@ -84,24 +84,45 @@ app.get('/api/v1/shipping/:id',(req,res)=>{
                 },
                 {
                     "status": "processing",
-                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
-                    "sub_status": "admitted",
+                    "description": "fernanda prueba.",
+                    "sub_status": "routing",
                     "carrier_updated_at": "2023-01-20T11:20:10.000",
                     "updated_at": "2023-01-20T14:12:55.213"
                 },
                 {
-                    "status": "on_hold",
+                    "status": "in_transit",
                     "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
-                    "sub_status": "assumed_lost",
+                    "sub_status": "1st_visit",
                     "carrier_updated_at": "2023-01-20T11:30:10.000",
                     "updated_at": "2023-01-20T14:16:26.435"
                 },
                 {
-                    "status": "not_delivered",
+                    "status": "in_transit",
                     "description": "el envío fue devuelto a su lugar de origen.",
-                    "sub_status": "returned",
+                    "sub_status": "2nd_visit",
                     "carrier_updated_at": "2023-01-20T11:45:10.000",
                     "updated_at": "2023-01-20T14:18:15.156"
+                },
+                {
+                    "status": "in_transit",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "3rd_visit",
+                    "carrier_updated_at": "2023-01-20T12:00:10.000",
+                    "updated_at": "2023-01-20T14:20:15.156"
+                },
+                {
+                    "status": "in_transit",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "distributing",
+                    "carrier_updated_at": "2023-01-20T12:20:10.000",
+                    "updated_at": "2023-01-20T14:22:15.156"
+                },
+                {
+                    "status": "delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "delivered",
+                    "carrier_updated_at": "2023-01-20T12:30:10.000",
+                    "updated_at": "2023-01-20T14:24:15.156"
                 }
             ]
          };
@@ -122,23 +143,51 @@ app.get('/api/v1/shipping/:id',(req,res)=>{
                 {
                     "status": "processing",
                     "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
-                    "sub_status": "admitted",
+                    "sub_status": "routing",
                     "carrier_updated_at": "2023-01-20T11:20:10.000",
                     "updated_at": "2023-01-20T14:12:55.213"
                 },
                 {
-                    "status": "on_hold",
+                    "status": "in_transit",
                     "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
-                    "sub_status": "assumed_lost",
+                    "sub_status": "routing_issues",
                     "carrier_updated_at": "2023-01-20T11:30:10.000",
                     "updated_at": "2023-01-20T14:16:26.435"
                 },
                 {
-                    "status": "not_delivered",
+                    "status": "in_transit",
                     "description": "el envío fue devuelto a su lugar de origen.",
-                    "sub_status": "returned",
+                    "sub_status": "address_issues",
                     "carrier_updated_at": "2023-01-20T11:45:10.000",
                     "updated_at": "2023-01-20T14:18:15.156"
+                },
+                {
+                    "status": "in_transit",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "ready_to_pickup",
+                    "carrier_updated_at": "2023-01-20T12:45:10.000",
+                    "updated_at": "2023-01-20T14:20:15.156"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "pickup_expired",
+                    "carrier_updated_at": "2023-01-20T13:00:10.000",
+                    "updated_at": "2023-01-20T14:22:15.156"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returning_to_sender",
+                    "carrier_updated_at": "2023-01-20T13:15:10.000",
+                    "updated_at": "2023-01-20T14:25:15.156"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "lost",
+                    "carrier_updated_at": "2023-01-20T13:30:10.000",
+                    "updated_at": "2023-01-20T14:30:15.156"
                 }
             ]
          };
