@@ -193,38 +193,108 @@ app.get('/api/v1/shipping/:id',(req,res)=>{
          };
         return res.json(correct);
         break;
-        case "065a7e34-d9e4-4cce-abea-4fae728265a3":
+        case "8689f620-1945-4804-aa9f-3cb38e4dbf71":
         correct = {
-            "shipment": "065a7e34-d9e4-4cce-abea-4fae728265a3",
-            "external_id": "1063440",
+            "shipment": "8689f620-1945-4804-aa9f-3cb38e4dbf71",
+            "external_id": "1063511",
             "status_history": [
                 {
                     "status": "pending",
-                    "description": "El envío esta listo para procesar.",
-                    "sub_status": "preparacion / no recogido",
+                    "description": "Prueba MIa.",
+                    "sub_status": "pending",
                     "carrier_updated_at": "2023-01-20T11:08:10.000",
                     "updated_at": "2023-01-20T14:10:10.313"
                 },
                 {
-                    "status": "processing",
+                    "status": "pending",
                     "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
-                    "sub_status": "admitted",
+                    "sub_status": "ready_for_dropoff",
                     "carrier_updated_at": "2023-01-20T11:20:10.000",
                     "updated_at": "2023-01-20T14:12:55.213"
                 },
                 {
-                    "status": "on_hold",
+                    "status": "pending",
                     "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
-                    "sub_status": "assumed_lost",
+                    "sub_status": "dropoff_expired",
                     "carrier_updated_at": "2023-01-20T11:30:10.000",
                     "updated_at": "2023-01-20T14:16:26.435"
                 },
                 {
-                    "status": "not_delivered",
+                    "status": "processing",
                     "description": "el envío fue devuelto a su lugar de origen.",
-                    "sub_status": "returned",
+                    "sub_status": "routing_issues",
                     "carrier_updated_at": "2023-01-20T11:45:10.000",
                     "updated_at": "2023-01-20T14:18:15.156"
+                },
+                {
+                    "status": "processing",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "address_issues",
+                    "carrier_updated_at": "2023-01-20T12:00:10.000",
+                    "updated_at": "2023-01-20T14:20:15.156"
+                },
+                {
+                    "status": "processing",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "ready_for_pickup",
+                    "carrier_updated_at": "2023-01-20T12:15:10.000",
+                    "updated_at": "2023-01-20T14:22:15.156"
+                },
+                {
+                    "status": "processing",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "1st_visit",
+                    "carrier_updated_at": "2023-01-20T12:30:10.000",
+                    "updated_at": "2023-01-20T14:24:15.156"
+                },
+                {
+                    "status": "processing",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "2nd_visit",
+                    "carrier_updated_at": "2023-01-20T12:45:10.000",
+                    "updated_at": "2023-01-20T14:26:15.156"
+                },
+                {
+                    "status": "processing",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "3rd_visit",
+                    "carrier_updated_at": "2023-01-20T13:00:10.000",
+                    "updated_at": "2023-01-20T14:28:15.156"
+                },
+                {
+                    "status": "processing",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "not_collected",
+                    "carrier_updated_at": "2023-01-20T13:15:10.000",
+                    "updated_at": "2023-01-20T14:30:15.156"
+                },
+                {
+                    "status": "in_transit",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "collected",
+                    "carrier_updated_at": "2023-01-20T13:30:10.000",
+                    "updated_at": "2023-01-20T14:32:15.156"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "lost",
+                    "carrier_updated_at": "2023-01-20T13:45:10.000",
+                    "updated_at": "2023-01-20T14:34:15.156"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T14:15:10.000",
+                    "updated_at": "2023-01-20T14:36:15.156"
+                },
+                {
+                    "status": "delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "delivered",
+                    "carrier_updated_at": "2023-01-20T14:35:10.000",
+                    "updated_at": "2023-01-20T14:38:15.156"
                 }
             ]
          };
