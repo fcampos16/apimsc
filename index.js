@@ -32,7 +32,7 @@ app.use(express.urlencoded({extended:true}));
 app.get('/api/v1/shipping/:id',(req,res)=>{
     const { id } = req.params;
     let correct=null;
-    switch($id) {
+    switch(id) {
         case "92468286-0419-4562-905e-d257c0bc2d4a":
         correct = {
             "shipment": "92468286-0419-4562-905e-d257c0bc2d4a",
