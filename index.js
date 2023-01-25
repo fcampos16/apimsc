@@ -31,9 +31,12 @@ app.use(express.urlencoded({extended:true}));
 
 app.get('/api/v1/shipping/:id',(req,res)=>{
     const { id } = req.params;
-    if (id=="732d010e-26fb-4ac8-9c77-84f7bb51fbd7") {
-        const correct = {
-            "shipment": "732d010e-26fb-4ac8-9c77-84f7bb51fbd7",
+    let correct=null;
+    switch($id) {
+        case "92468286-0419-4562-905e-d257c0bc2d4a":
+        correct = {
+            "shipment": "92468286-0419-4562-905e-d257c0bc2d4a",
+            "external_id": "1063437",
             "status_history": [
                 {
                     "status": "pending",
@@ -66,13 +69,458 @@ app.get('/api/v1/shipping/:id',(req,res)=>{
             ]
          };
         return res.json(correct);
+        break;
+        case "9bff6704-11c2-48e6-8b53-e9ea18966088":
+        correct = {
+            "shipment": "9bff6704-11c2-48e6-8b53-e9ea18966088",
+            "external_id": "1063438",
+            "status_history": [
+                {
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
+                },
+                {
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
+                }
+            ]
+         };
+        return res.json(correct);
+        break;
+        case "c7c8d7eb-e43c-442f-9fe0-651716d9a488":
+        correct = {
+            "shipment": "c7c8d7eb-e43c-442f-9fe0-651716d9a488",
+            "external_id": "1063439",
+            "status_history": [
+                {
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
+                },
+                {
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
+                }
+            ]
+         };
+        return res.json(correct);
+        break;
+        case "065a7e34-d9e4-4cce-abea-4fae728265a3":
+        correct = {
+            "shipment": "065a7e34-d9e4-4cce-abea-4fae728265a3",
+            "external_id": "1063440",
+            "status_history": [
+                {
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
+                },
+                {
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
+                }
+            ]
+         };
+        return res.json(correct);
+        break;
+        case "b1c12e68-8be7-4826-8da2-ebef63e9eb33":
+        correct = {
+            "shipment": "b1c12e68-8be7-4826-8da2-ebef63e9eb33",
+            "external_id": "1063441",
+            "status_history": [
+                {
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
+                },
+                {
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
+                }
+            ]
+         };
+        return res.json(correct);
+        break;
+        case "aa71c2cd-b4bb-4b7b-8b5a-fdb46b62d1ce":
+        correct = {
+            "shipment": "aa71c2cd-b4bb-4b7b-8b5a-fdb46b62d1ce",
+            "external_id": "1063491",
+            "status_history": [
+                {
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
+                },
+                {
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
+                }
+            ]
+         };
+        return res.json(correct);
+        break;
+        case "5c4417ab-316d-4f00-95b1-472bfe914b68":
+        correct = {
+            "shipment": "5c4417ab-316d-4f00-95b1-472bfe914b68",
+            "external_id": "1063492",
+            "status_history": [
+                {
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
+                },
+                {
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
+                }
+            ]
+         };
+        return res.json(correct);
+        break;
+        case "3d71698a-4789-4130-ad5a-a0abd61b258e":
+        correct = {
+            "shipment": "3d71698a-4789-4130-ad5a-a0abd61b258e",
+            "external_id": "1063493",
+            "status_history": [
+                {
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
+                },
+                {
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
+                }
+            ]
+         };
+        return res.json(correct);
+        break;
+        case "74fa70fb-2ff5-4bbf-aa6b-c36c5355c133":
+        correct = {
+            "shipment": "74fa70fb-2ff5-4bbf-aa6b-c36c5355c133",
+            "external_id": "1063494",
+            "status_history": [
+                {
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
+                },
+                {
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
+                }
+            ]
+         };
+        return res.json(correct);
+        break;
+        case "2260b538-9efe-45e7-b86c-973362c35fb9":
+        correct = {
+            "shipment": "2260b538-9efe-45e7-b86c-973362c35fb9",
+            "external_id": "1063495",
+            "status_history": [
+                {
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
+                },
+                {
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
+                }
+            ]
+         };
+        return res.json(correct);
+        break;
+        case "f5538e57-16ac-416d-95fe-f84675c4d639":
+        correct = {
+            "shipment": "f5538e57-16ac-416d-95fe-f84675c4d639",
+            "external_id": "1063496",
+            "status_history": [
+                {
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
+                },
+                {
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
+                }
+            ]
+         };
+        return res.json(correct);
+        break;
+        case "f0ad8b97-1424-45e6-a76d-838f4d8a7438":
+        correct = {
+            "shipment": "f0ad8b97-1424-45e6-a76d-838f4d8a7438",
+            "external_id": "1063497",
+            "status_history": [
+                {
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
+                },
+                {
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
+                }
+            ]
+         };
+        return res.json(correct);
+        break;
+        case "858e0635-6913-46f4-93cc-e9e316db2c91":
+        correct = {
+            "shipment": "858e0635-6913-46f4-93cc-e9e316db2c91",
+            "external_id": "1063498",
+            "status_history": [
+                {
+                    "status": "pending",
+                    "description": "El envío esta listo para procesar.",
+                    "sub_status": "preparacion / no recogido",
+                    "carrier_updated_at": "2023-01-20T11:08:10.000",
+                    "updated_at": "2023-01-20T14:10:10.313"
+                },
+                {
+                    "status": "processing",
+                    "description": "envío asignado a un moover (es el mensajero que realiza el envío).",
+                    "sub_status": "admitted",
+                    "carrier_updated_at": "2023-01-20T11:20:10.000",
+                    "updated_at": "2023-01-20T14:12:55.213"
+                },
+                {
+                    "status": "on_hold",
+                    "description": "cuando algo inesperado sucede durante la vida de un envío. Incluye una descripción de la incidencia.",
+                    "sub_status": "assumed_lost",
+                    "carrier_updated_at": "2023-01-20T11:30:10.000",
+                    "updated_at": "2023-01-20T14:16:26.435"
+                },
+                {
+                    "status": "not_delivered",
+                    "description": "el envío fue devuelto a su lugar de origen.",
+                    "sub_status": "returned",
+                    "carrier_updated_at": "2023-01-20T11:45:10.000",
+                    "updated_at": "2023-01-20T14:18:15.156"
+                }
+            ]
+         };
+        return res.json(correct);
+        break;
     }
         
     const error={
-        "shipment": "9558e7af-96a3-4d14-8590-ec923b653e11",
+        "shipment": "error",
         "carrier": "moova",
         "country": "ARG",
-        "external_id": "1063431",
+        "external_id": "",
         "status": "error",
         "status_change": false,
         "tracking_url": "https://dev.moova.io/external?id=",
