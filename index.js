@@ -32,6 +32,7 @@ app.use(express.urlencoded({extended:true}));
 app.get('/orders/:id',(req,res)=>{
     const { id } = req.params;
     let correct=null;
+    if (id==1) {
     correct = {
         "id": 2000005768964120,
         "date_created": "2023-06-02T05:38:45.000-04:00",
@@ -137,6 +138,159 @@ app.get('/orders/:id',(req,res)=>{
             "return": null
         }
     };
+    } else {
+        correct={
+            "id": 2000005768964120,
+            "date_created": "2023-06-02T05:38:45.000-04:00",
+            "last_updated": "2023-06-02T05:41:19.000-04:00",
+            "expiration_date": "2023-06-30T05:39:31.000-04:00",
+            "date_closed": "2023-06-02T05:39:31.000-04:00",
+            "comment": null,
+            "pack_id": 2000004503068057,
+            "pickup_id": null,
+            "fulfilled": null,
+            "hidden_for_seller": null,
+            "buying_mode": "buy_equals_pay",
+            "shipping_cost": null,
+            "application_id": null,
+            "mediations": [],
+            "total_amount": 3837.00,
+            "paid_amount": 3837.00,
+            "coupon": {
+                "amount": 0.00,
+                "id": null
+            },
+            "order_items": [
+                {
+                    "item": {
+                        "id": "MLA725484167",
+                        "title": "Cafayate Reserve Cabernet Sauvignon Botella De 750 Ml",
+                        "category_id": "MLA1404",
+                        "variation_id": null,
+                        "seller_custom_field": "7790093095238",
+                        "variation_attributes": [],
+                        "warranty": "De la marca",
+                        "condition": "new",
+                        "seller_sku": "7790093095238",
+                        "global_price": null,
+                        "net_weight": null
+                    },
+                    "quantity": 3,
+                    "requested_quantity": {
+                        "value": 3,
+                        "measure": "unit"
+                    },
+                    "picked_quantity": null,
+                    "unit_price": 1279.00,
+                    "full_unit_price": 1676.00,
+                    "currency_id": "ARS",
+                    "manufacturing_days": null,
+                    "sale_fee": 179.06,
+                    "listing_type_id": "gold_special",
+                    "base_exchange_rate": null,
+                    "base_currency_id": null,
+                    "element_id": null,
+                    "discounts": null,
+                    "bundle": null
+                }
+            ],
+            "currency_id": "ARS",
+            "payments": [
+                {
+                    "id": 58780508475,
+                    "order_id": 2000005768964120,
+                    "payer_id": 799262,
+                    "collector": {
+                        "id": 309657858
+                    },
+                    "card_id": null,
+                    "reason": "Cafayate Reserve Cabernet Sauvignon Botella De 750 Ml",
+                    "site_id": "MLA",
+                    "payment_method_id": "account_money",
+                    "currency_id": "ARS",
+                    "installments": 1,
+                    "issuer_id": "2005",
+                    "atm_transfer_reference": {
+                        "transaction_id": null,
+                        "company_id": null
+                    },
+                    "coupon_id": null,
+                    "activation_uri": null,
+                    "operation_type": "regular_payment",
+                    "payment_type": "account_money",
+                    "available_actions": [
+                        "refund"
+                    ],
+                    "status": "approved",
+                    "status_code": null,
+                    "status_detail": "accredited",
+                    "transaction_amount": 3837.00,
+                    "transaction_amount_refunded": 0.00,
+                    "taxes_amount": 0.00,
+                    "shipping_cost": 0.00,
+                    "coupon_amount": 0.00,
+                    "overpaid_amount": 0.00,
+                    "total_paid_amount": 3837.00,
+                    "installment_amount": null,
+                    "deferred_period": null,
+                    "date_approved": "2023-06-02T05:39:30.000-04:00",
+                    "transaction_order_id": null,
+                    "date_created": "2023-06-02T05:39:30.000-04:00",
+                    "date_last_modified": "2023-06-02T05:41:19.000-04:00",
+                    "marketplace_fee": 537.18,
+                    "reference_id": null,
+                    "authorization_code": null
+                }
+            ],
+            "shipping": {
+                "id": 42321471080
+            },
+            "status": "paid",
+            "status_detail": null,
+            "tags": [
+                "supermarket",
+                "pack_order",
+                "splitted_order",
+                "paid",
+                "not_delivered"
+            ],
+            "internal_tags": [],
+            "feedback": {
+                "seller": null,
+                "buyer": null
+            },
+            "context": {
+                "channel": "marketplace",
+                "site": "MLA",
+                "flows": [
+                    "supermarket"
+                ],
+                "application": null,
+                "product_id": null,
+                "store_id": null
+            },
+            "seller": {
+                "id": 309657858
+            },
+            "buyer": {
+                "id": 799262,
+                "nickname": "CLAP_CYCLING_PRODUCTS",
+                "first_name": "Claudio Ignacio Pertile",
+                "last_name": "Claudio Ignacio Pertile"
+            },
+            "taxes": {
+                "amount": null,
+                "currency_id": null,
+                "id": null
+            },
+            "cancel_detail": null,
+            "manufacturing_ending_date": null,
+            "order_request": {
+                "change": null,
+                "return": null
+            }
+        }
+    }
     return res.json(correct);
 });
 
