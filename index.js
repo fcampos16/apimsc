@@ -36,13 +36,13 @@ app.get('/orders/:id',(req,res)=>{
     correct = {
         "id": 2000005768964120,
         "date_created": "2023-06-02T05:38:45.000-04:00",
-        "last_updated": "2023-06-02T05:41:19.000-04:00",
+        "last_updated": "2023-06-05T10:49:58.000-04:00",
         "expiration_date": "2023-06-30T05:39:31.000-04:00",
         "date_closed": "2023-06-02T05:39:31.000-04:00",
         "comment": null,
         "pack_id": 2000004503068057,
         "pickup_id": null,
-        "fulfilled": null,
+        "fulfilled": true,
         "hidden_for_seller": null,
         "buying_mode": "buy_equals_pay",
         "shipping_cost": null,
@@ -100,7 +100,7 @@ app.get('/orders/:id',(req,res)=>{
             "pack_order",
             "splitted_order",
             "paid",
-            "not_delivered"
+            "delivered"
         ],
         "internal_tags": [],
         "feedback": {
@@ -142,13 +142,13 @@ app.get('/orders/:id',(req,res)=>{
         correct={
             "id": 2000005768964120,
             "date_created": "2023-06-02T05:38:45.000-04:00",
-            "last_updated": "2023-06-02T05:41:19.000-04:00",
+            "last_updated": "2023-06-05T10:49:58.000-04:00",
             "expiration_date": "2023-06-30T05:39:31.000-04:00",
             "date_closed": "2023-06-02T05:39:31.000-04:00",
             "comment": null,
             "pack_id": 2000004503068057,
             "pickup_id": null,
-            "fulfilled": null,
+            "fulfilled": true,
             "hidden_for_seller": null,
             "buying_mode": "buy_equals_pay",
             "shipping_cost": null,
@@ -236,7 +236,7 @@ app.get('/orders/:id',(req,res)=>{
                     "date_approved": "2023-06-02T05:39:30.000-04:00",
                     "transaction_order_id": null,
                     "date_created": "2023-06-02T05:39:30.000-04:00",
-                    "date_last_modified": "2023-06-02T05:41:19.000-04:00",
+                    "date_last_modified": "2023-06-05T10:48:28.000-04:00",
                     "marketplace_fee": 537.18,
                     "reference_id": null,
                     "authorization_code": null
@@ -252,7 +252,7 @@ app.get('/orders/:id',(req,res)=>{
                 "pack_order",
                 "splitted_order",
                 "paid",
-                "not_delivered"
+                "delivered"
             ],
             "internal_tags": [],
             "feedback": {
